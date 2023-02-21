@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      
+      #error {
+        color: #c72222;
+      }
+
+      #error,
+      #event-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      #event-summary {
+        color: black;
+      }
+
+      a {
+        color: rgb(240, 141, 12);
+        text-decoration: none;
+      }
+      
+      a:hover {
+        color: rgb(165, 165, 165);
+      }
+
+      .button > input {
+        background-color: #9063cd;
+        border: solid 2px #9063cd;
+        border-radius: 10px;
+        box-shadow: 0 0 2px  rgba(144, 99, 205, 0.6);
+        color: white;
+        font-weight: 700;
+        margin: .75rem;
+        padding: .75rem 1.25rem;
+        transition: all 0.25s ease-out;
+      }
+
+      .button > input:hover {
+        background: none;
+        color: #9063cd;
+      }
+
+      .content {
+        display: flex;
+        font-family: 'Urbanist', sans-serif;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      .input > input {
+        background: none;
+        border: none;
+        border-bottom: solid 3px #9589a7;
+        color: black;
+        font-size: 1rem;
+        text-align: center;
+        width: 192px;
+      }
+
+      .is-background {
+        background-color: #e3d8f3;
+      }
+
+      .is-foreground {
+        color: #9063cd;
+      }
+
+      .is-vertical {
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      .subtitle {
+        color: black;
+        font-size: 1.25rem;
+        margin-bottom: 2.75rem;
+        margin-top: .15rem;
+        padding-bottom: .25rem;
+      }
+    </style>
+  </head>
+  <body class="is-background">
+    <main class="is-foreground">
+      <div class="content is-vertical">
+        <h1 class="title">Registro de Presença</h1>
+        <p class="subtitle">Insira o código compartilhado pelo Organizador</p>
+
+        <div id="request">
+          <div class="input">
+            <input type="text" name="token" placeholder="Digite aqui..." required>
+          </div>
+          <div class="button">
+            <input id="button" type="button" value="Verificar">
+          </div>
+        </div>
+        <div id="response" hidden>
+          <p>Verificando... 👩‍💻</p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="assets/js/main.js"></script>
+</html>
